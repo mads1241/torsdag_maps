@@ -48,42 +48,46 @@ function initMap() {
         animation: google.maps.Animation.DROP,
         title: 'Lygten 16!'
     });
-    var marker4 = new google.maps.Marker({
-        position: frederiksberg,
-        map: map,
-        animation: google.maps.Animation.DROP,
-        title: 'Julius Valentiners Vej!'
-    });
-    var marker5 = new google.maps.Marker({
-        position: gamle_kollegie,
-        map: map,
-        animation: google.maps.Animation.DROP,
-        title: 'Følfodvej!'
-    });
 
+    var indsatContent = document.querySelector("#copenhagen_info");
+    var indsatContent2 = document.querySelector("#hjem_info");
+    var indsatContent3 = document.querySelector("#lygten_16_info");
+
+    var infowindow = new google.maps.InfoWindow({
+        content: "København"
+    })
+
+
+    var infowindow2 = new google.maps.InfoWindow({
+        content: "Hjem"
+
+    })
+
+
+    var infowindow3 = new google.maps.InfoWindow({
+        content: "Lygten 16"
+    })
 
     marker.addListener('click', function () {
         map.setZoom(16);
         map.setCenter(marker.getPosition());
+
+        infowindow.open(map, marker);
+        infowindow.setContent(indsatContent);
     });
 
     marker2.addListener('click', function () {
         map.setZoom(16);
         map.setCenter(marker2.getPosition());
+
+        infowindow2.open(map, marker2);
+        infowindow2.setContent(indsatContent2);
     });
     marker3.addListener('click', function () {
         map.setZoom(16);
         map.setCenter(marker3.getPosition());
+        infowindow3.open(map, marker3);
+        infowindow3.setContent(indsatContent3);
     });
-    marker4.addListener('click', function () {
-        map.setZoom(16);
-        map.setCenter(marker4.getPosition());
-    });
-
-    var infowindow = new google.maps.InfoWindow({
-        content: "Hjem",
-
-    });
-    infowindow.open(map, marker2);
 
 }
