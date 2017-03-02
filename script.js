@@ -1,5 +1,6 @@
 var map;
 
+
 function initMap() {
     var copenhagen = {
         lat: 55.68420,
@@ -38,7 +39,7 @@ function initMap() {
     var marker2 = new google.maps.Marker({
         position: hjem,
         map: map,
-        animation: google.maps.Animation.BOUNCE,
+        animation: google.maps.Animation.DROP,
         title: 'Home, sweet home!'
     });
     var marker3 = new google.maps.Marker({
@@ -59,5 +60,30 @@ function initMap() {
         animation: google.maps.Animation.DROP,
         title: 'Følfodvej!'
     });
+
+
+    marker.addListener('click', function () {
+        map.setZoom(16);
+        map.setCenter(marker.getPosition());
+    });
+
+    marker2.addListener('click', function () {
+        map.setZoom(16);
+        map.setCenter(marker2.getPosition());
+    });
+    marker3.addListener('click', function () {
+        map.setZoom(16);
+        map.setCenter(marker3.getPosition());
+    });
+    marker4.addListener('click', function () {
+        map.setZoom(16);
+        map.setCenter(marker4.getPosition());
+    });
+
+    var infowindow = new google.maps.InfoWindow({
+        content: "Hjem",
+
+    });
+    infowindow.open(map, marker2);
 
 }
