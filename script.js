@@ -31,6 +31,7 @@ function initMap() {
     var marker = new google.maps.Marker({
         position: copenhagen,
         map: map,
+        icon: 'images/pin.png',
         title: 'Hello Copenhagen!'
     });
     var marker2 = new google.maps.Marker({
