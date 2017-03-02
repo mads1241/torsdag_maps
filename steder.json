@@ -1,0 +1,19 @@
+[{
+    "id": "copenhagen1",
+    "lat": 55.68420,
+    "lng": 12.57954,
+    "ll": (55.68420, 12.57954),
+    "navn": "København",
+    "beskrivelse": "Jeg har nu boet herover i 8 år",
+    "billede": "images/1.jpg",
+
+ }, {
+    "id": "sydhavn1",
+    "lat": 55.655077,
+    "lng": 12.548539,
+    "ll": (55.655077, 12.548539),
+    "navn": "Sydhavnen",
+    "beskrivelse": "Home, sweet home",
+    "billede": "images/2.jpg",
+
+ }]
