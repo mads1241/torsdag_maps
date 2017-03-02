@@ -31,27 +31,32 @@ function initMap() {
     var marker = new google.maps.Marker({
         position: copenhagen,
         map: map,
+        animation: google.maps.Animation.DROP,
         icon: 'images/pin.png',
         title: 'Hello Copenhagen!'
     });
     var marker2 = new google.maps.Marker({
         position: hjem,
         map: map,
+        animation: google.maps.Animation.BOUNCE,
         title: 'Home, sweet home!'
     });
     var marker3 = new google.maps.Marker({
         position: lygten,
         map: map,
+        animation: google.maps.Animation.DROP,
         title: 'Lygten 16!'
     });
     var marker4 = new google.maps.Marker({
         position: frederiksberg,
         map: map,
+        animation: google.maps.Animation.DROP,
         title: 'Julius Valentiners Vej!'
     });
     var marker5 = new google.maps.Marker({
         position: gamle_kollegie,
         map: map,
+        animation: google.maps.Animation.DROP,
         title: 'Følfodvej!'
     });
 
